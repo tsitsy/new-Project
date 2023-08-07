@@ -129,6 +129,7 @@ a:hover{
 }
 .second{
     background-image: url(images/bck2.png);
+    background-size: cover;
     display: flex;
     align-items: center;
     padding-inline: 100px;
@@ -138,13 +139,15 @@ a:hover{
 .lorem{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
     width: 763px;
+    height: auto;
     h3{
         font-size: 46px;
     }
     p{
         font-size: 18px;
+        line-height: 28px;
         color: #6B6B6B;
     }
     .red{
@@ -156,4 +159,34 @@ a:hover{
         height: 46px;
         font-size: 16px;
     }
+}
+.third{
+    background-image: url(images/bckday.png);
+    padding: 80px;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    h3{
+        font-size: 46px;
+    }
+    p{
+        font-size: 24px;
+        color: var(--primary);
+    }
+}
+.dayCard{
+    display: flex;
+    justify-content: space-between;
+}
+.day{
+    display: flex;
+    justify-content: space-between;
+}
+.heure{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
