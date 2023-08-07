@@ -47,14 +47,27 @@ nav{
         color: white;
       }
 }
+a:hover{
+    border-bottom: 1px solid var(--primary);
+}
+
 .hero{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    flex-direction: column;  
     background-size: cover;
     background-image: url(images/gautier.png);
     height: 100vh;
     padding-inline: 100px;
+}
+.bio{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 275px;
+}
+.sweeper{
+    margin: 0 auto;
 }
 
 .avatar{
@@ -113,4 +126,34 @@ nav{
         }
     }
 
+}
+.second{
+    background-image: url(images/bck2.png);
+    display: flex;
+    align-items: center;
+    padding-inline: 100px;
+    gap: 150px;
+    padding: 80px;
+}
+.lorem{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 763px;
+    h3{
+        font-size: 46px;
+    }
+    p{
+        font-size: 18px;
+        color: #6B6B6B;
+    }
+    .red{
+        color: var(--primary);
+    }
+    button{
+        background-color: transparent;
+        width: 228px;
+        height: 46px;
+        font-size: 16px;
+    }
 }
