@@ -26,33 +26,46 @@ header{
     left: 0;
     right: 0;
 }
+
 .link{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 45px;
+    gap: 60px;
     button{
         color: white;
         background-color: transparent;
-        border: white solid 1px;
-        border-radius: 5px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
-        padding: 15px;
+        display: flex;
+        padding: 12px 24px;
+        align-items: flex-start;
+        gap: 8px; 
+        border-radius: 4px;
+        border: 2px solid #FFF; 
 }
 }
 nav{
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase; 
     display: flex;
-    gap: 15px;
+    gap: 28px;
     a{
         text-decoration: none;
         color: white;
       }
 }
-a:hover{
-    border-bottom: 1px solid var(--primary);
+// a:hover{
+//     border-bottom: 1px solid var(--primary);
+// }
+.trait{
+    position: absolute;
+    top: 130px;
+    left: 795px;
 }
 
 .hero{
@@ -91,12 +104,15 @@ a:hover{
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    button{
+    .bouton{
         color: white;
         background-color: var(--primary);
-        font-size: 16px;
-        height: 60px;
+        display: flex;
         width: 206px;
+        padding: 18px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px; 
     }
 }
 
@@ -138,9 +154,8 @@ a:hover{
     background-size: cover;
     display: flex;
     align-items: center;
-    padding-inline: 100px;
-    gap: 100px;
-    padding: 80px;
+    padding: 80px 100px;
+    gap: 104px;
 }
 .lorem{
     display: flex;
@@ -148,10 +163,16 @@ a:hover{
     gap: 40px;
     width: 49%;
     height: auto;
+    .dolor{
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
     h3{
         font-size: 46px;
     }
     p{
+        
         font-size: 18px;
         line-height: 28px;
         color: #6B6B6B;
@@ -161,9 +182,13 @@ a:hover{
     }
     button{
         background-color: transparent;
+        display: flex;
         width: 228px;
-        height: 46px;
-        font-size: 16px;
+        padding: 12px 24px;
+        border: 1px solid #7E7B7B;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;  
     }
 }
 .third{
@@ -196,10 +221,16 @@ a:hover{
     padding: 28px;
     height: 159px;
     button{
+        display: flex;
         width: 158px;
-        height: 48px;
+        padding: 12px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        flex-shrink: 0; 
         font-size: 16px;
         background-color: transparent;
+        border: 1px solid #7E7B7B; 
     }}
  .day{
     display: flex;
@@ -227,7 +258,7 @@ a:hover{
     width: 800px;
 }
 .more{
-    button{
+    .bouton{
         margin: 0 auto;
     }
 }
@@ -279,10 +310,15 @@ a:hover{
         font-size: 18px;
     }
     button{
+        display: flex;
         width: 158px;
-        height: 48px;
+        padding: 12px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px; 
         font-size: 16px;
         background-color: transparent;
+        border: 1px solid #7E7B7B; 
     }
 }
 .one{
@@ -295,10 +331,16 @@ a:hover{
     background-image: url(/src/images/card4.png);
 }
 .btn{
-    button{
+    .bouton{
+        display: flex;
+        width: 228px;
+        padding: 12px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px; 
         background-color: transparent;
         color: white;
-        border: white solid 1px;
+        border: white solid 2px;
     }
 
 }
@@ -372,5 +414,80 @@ a:hover{
         }
     }
 }
+.seven{
+    display: flex;
+    background-image: url(src/images/back3.png);
+    padding: 80px 100px;
+    flex-direction: column;
+    gap: 40px; 
+}
+.session{
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    flex: 1 0 0; 
+    border-radius: 4px;
+    background: #FFF; 
+    h5{
+        font-size: 38px;
+    }
+    ul{
+        font-size: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px; 
+        .mail{
+            display: flex;
+            flex-direction: column;
+            padding-left: 40px;
+        }
+    }
+    
+    button{
+        display: flex;
+        width: 164px;
+        padding: 18px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px; 
+        border: 2px solid #B0ACAC; 
+        background-color: #FFF;
+    }
+    .orange{
+        list-style: none;
+        li::before {
+            content: "\2022";
+            color: var(--primary);
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em;
+          }
+    }
+}
+.by{
+    display: flex;
+    align-items: flex-start;
+    gap: 32px; 
+}
+.youtube{
+    background-image: url(src/images/bckday.png);
+    display: flex;
+    padding: 80px 100px;
+    align-items: center;
+    gap: 104px;
+    .film{
+        position: relative;
+    } 
+    .play{
+        position: absolute;
+        left: 330px;
+        top: 164px;
+    }
+}
+
 
     
