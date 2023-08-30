@@ -73,7 +73,7 @@ header{
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
-        line-height: 146px;
+        line-height: 140px;
         text-transform: uppercase;  
         gap: 15px;
         display: none;
@@ -87,8 +87,8 @@ header{
             color: white;
             line-height: 120px;
             font-size: 10px;
-            @media (min-width:1024px) {
-                font-size: 12px;
+            @media (min-width:1536px) {
+                font-size: 16px;
             }
           }
         .active{
@@ -130,7 +130,7 @@ header{
     align-items: center;
     padding-top: 90px;
     gap: 20px;
-    @media (min-width:368px) {
+    @media (min-width:675px) {
         gap: 50px;
     }
     @media (min-width:1024px) {
@@ -1192,6 +1192,7 @@ header{
     background: #FFF; 
     @media (min-width:1024px) {
         flex-direction: row;
+        padding-top: 0;
     }
     .cible{
         width: 50%;
