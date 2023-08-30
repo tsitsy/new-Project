@@ -12,24 +12,50 @@ body{
 :root {
     --primary : #F19540
 }
+   
 
 header{
     background-color: rgba(0, 0, 0, 0.20);
     display: flex;
-    padding-inline: 100px;
+    padding-inline: 25px;
     justify-content: space-between;
     align-items: center; 
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
+    padding-top: 5px;
+    @media (min-width:1024px){
+        padding-inline: 50px;
+        padding-top: 0;
+    }
+    @media (min-width:1280px) {
+        padding-inline: 80px;
+     }
+    @media (min-width: 1536px) {
+        padding-inline: 100px;
+        
+    }
+  
+  
+    
+}
+.menuH{
+    display: block;
+    @media (min-width:1024px) {
+        display: none;
+    }
 }
 
 .link{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 60px;
+    gap: 45px;
+    @media (min-width:1024px){
+        gap: 60px;
+    }
+    
     button{
         color: white;
         background-color: transparent;
@@ -48,22 +74,29 @@ header{
         font-style: normal;
         font-weight: 400;
         line-height: 146px;
-        text-transform: uppercase; 
-        display: flex;
-        gap: 28px;
+        text-transform: uppercase;  
+        gap: 15px;
+        display: none;
+        @media (min-width:1024px){
+            gap: 28px;
+            display: flex;
+        }
+       
         a{
             text-decoration: none;
             color: white;
-            line-height: 146px;
+            line-height: 120px;
+            font-size: 10px;
+            @media (min-width:1024px) {
+                font-size: 12px;
+            }
           }
+        .active{
+            border-bottom: 5px solid var(--primary);
+        }  
     }
-    a:hover{
-        border-bottom: 5px solid var(--primary);
-    }
+   
 }
-
-
-
 
 .hero{
     display: flex;
@@ -72,49 +105,146 @@ header{
     background-image: url(/src/images/gautier.png);
     background-size: cover;
     background-repeat: no-repeat;
-    padding-inline: 100px;
-    height: 1117px;
+    padding: 50px;
+    height: auto;
+    gap: 50px;
+    @media (min-width:1024px) {
+        padding-inline: 50px;
+        padding-bottom: 80px;
+            } 
+    
+    @media (min-width:1280px){
+        padding-inline: 80px;
+    }
+    @media (min-width:1536px) {
+        padding-inline: 100px;
+        
+    }
+      
 
 }
 .bio{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding-top: 290px;
+    padding-top: 90px;
+    gap: 20px;
+    @media (min-width:368px) {
+        gap: 50px;
+    }
+    @media (min-width:1024px) {
+        padding-top: 290px;
+        flex-direction: row; 
+    }
 }
 .sweeper{
     margin: auto;
+    img{
+        width: 130px;
+        @media (min-width:640px) {
+            width: 100%;
+        }
+    }
 }
 
 .avatar{
     gap: 20px;
-    h1{font-size: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width:1024px){
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    h1{font-size: 48px;
         color: #FFF;
         font-style: normal;
         font-weight: 400;
-        line-height: 150px;
+        line-height: 60px;
         letter-spacing: 0.2px;
-        text-transform: capitalize; 
-    }
+        text-transform: capitalize;
+        @media (min-width:1024px){
+            font-size: 100px;
+            line-height:120px;
+        } 
+        @media (min-width:1280px){
+            font-size: 120px;
+            line-height: 150px;
+        }
+        
+        @media (min-width:1536px) {
+            font-size: 150px;
+            line-height: 200px;
+        }
+       
+        }
+        
+    
     p{
-        font-size: 28px;
+        font-size: 12px;
         color: white;
+        @media (min-width:1024px){
+            font-size: 20px;
+        }
+        @media (min-width:1280px){
+            font-size: 24px;
+        }
+        @media (min-width:1536px) {
+           font-size: 28px; 
+        }
+        
+       
     }
 }
 .view{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 8px;
+    @media (min-width:1024px) {
+        gap: 20px;
+    }
+   
+    .slide1{
+        width: 57px;
+            @media (min-width:640px) {
+                width: 100%;
+            }
+        }
+
     .bouton{
         color: white;
         background-color: var(--primary);
         display: flex;
-        width: 206px;
-        padding: 18px 24px;
+        width: 100px;
+        padding: 10px 16px;
         justify-content: center;
         align-items: center;
-        gap: 8px; 
+        gap: 8px;
+        font-size: 12px; 
+        @media (min-width:1024px){
+            width: 160px;
+            padding: 12px 18px;
+            font-size: 16px;
+        }
+        @media (min-width:1280px){
+            width: 180px;
+            padding: 15px 20px;
+        }
+        @media (min-width:1536px){
+            width: 206px;
+            padding: 18px 24px;
+        }
+       
+       
+    }
+    p{
+        font-size: 12px;
+        @media (min-width:1024px) {
+            font-size: 16px;
+        }
     }
 }
 
@@ -122,29 +252,76 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 591px;
-    height:160px;
-    gap: 50px;
-    padding: 20px;
+    width: auto;
+    height: 70px;
+    padding: 15px;
+    gap: 30px;
+    @media (min-width:640px) {
+        width: 380px;
+        height: 80px;
+    }
+
+    @media (min-width:1024px) {
+        width: 521px;
+        height: 112px;
+        gap: 40px;
+        padding: 20px;
+    }
+    @media (min-width:1280px){
+        width: 570px;
+        height: 140px;
+        gap: 46px;
+    }
+    @media (min-width:1536px){
+        width: 591px;
+        height: 160px;
+        gap: 50px;
+    } 
     .txt{
         h5{
             color: #FFF;
-            font-size: 32px;
+            font-size: 16px;
             font-style: normal;
             font-weight: 500;
             line-height: normal;
-            letter-spacing: 0.2px; 
+            letter-spacing: 0.2px;
+            @media (min-width:1024px) {
+                font-size: 24px;
+            } 
+            @media (min-width:1280px) {
+                font-size: 32px;
+               
+            } 
+            @media (min-width:1536px){
+                font-size: 42px;
+            }
+
+            
         }
         p{
-            font-size: 20px;
+            font-size: 12px;
             color: white;
+            @media (min-width:1024px) {
+                font-size: 18px;
+            }  
+            @media (min-width:1280px) {
+                font-size: 20px;
+            }
+            @media (min-width:1536px){
+                font-size: 24px;
+            }
+             
         }
     }
 
 }
 .histoire{
     background-color: white;
-    padding: 32px;
+    padding: 15px;
+    @media (min-width:1024px) {
+        padding: 32px;
+    }    
+
     .txt{
         h5{
             color: black;
@@ -159,34 +336,78 @@ header{
     background-image: url(/src/images/bck2.png);
     background-size: cover;
     display: flex;
+    flex-direction: column-reverse;
     align-items: center;
-    padding: 80px 100px;
-    gap: 104px;
+    padding: 50px;
+    gap: 90px;
+    @media (min-width:1024px) {
+        padding: 80px;
+        flex-direction: row;
+        gap: 104px;
+    }    
+    @media (min-width:1536px) {
+        padding: 80px 100px;
+        gap: 500px;
+        
+    }
+    
+}
+.Dolife{
+    width: 100%;
+    .life{
+        width: 100%;
+        @media (min-width:1024px) {
+            width: auto;;
+        } 
+    }
 }
 .lorem{
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    width: 49%;
+    gap: 15px;
+    width: auto;
     height: auto;
+    @media (min-width:1024px) {
+        gap: 40px;
+        width: 49%;
+    } 
+    @media (min-width:1536px) {
+        gap: 60px;
+        width: 100%;
+    }   
     .dolor{
         display: flex;
         flex-direction: column;
-        gap: 18px;
+        gap: 10px;
+        @media (min-width:1024px) {
+            gap: 18px;
+        } 
     }
     h3{
-        font-size: 46px;
+        font-size: 32px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
         letter-spacing: 0.2px;
         text-transform: capitalize; 
+        @media (min-width:1024px) {
+            font-size: 46px;
+        } 
+        @media (min-width:1536px) {
+            font-size: 56px;
+        } 
     }
     p{
         
-        font-size: 18px;
+        font-size: 12px;
         line-height: 28px;
         color: #6B6B6B;
+        @media (min-width:1024px) {
+            font-size: 18px;
+        }    
+        @media (min-width:1536px) {
+            font-size: 24px;
+        }  
     }
     .red{
         color: var(--primary);
@@ -201,10 +422,20 @@ header{
         align-items: center;
         gap: 8px;  
     }
+    .socio{
+        gap: 15px;
+        @media (min-width:1024px) {
+            gap: 30px;
+        } 
+    }
+    
 }
 .third{
     background-image: url(/src/images/bckday.png);
-    padding: 80px;
+    padding: 50px;
+    @media (min-width:1024px) {
+        padding: 80px;
+    }
 }
 .date{
     padding-top: 40px;
@@ -216,64 +447,116 @@ header{
     text-align: center;
     gap: 10px;
     h3{
-        font-size: 46px;
+
         color: #000;
-        font-size: 46px;
+        font-size: 32px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
         letter-spacing: 0.2px;
-        text-transform: capitalize; 
+        text-transform: capitalize;
+        @media (min-width:1024px) {
+            font-size: 46px;
+        } 
     }
     p{
-        font-size: 24px;
+        font-size: 12px;
         color: var(--primary);
+        @media (min-width:1024px) {
+            font-size: 24px;
+        } 
     }
 }
 .dayCard{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 100px;
+    gap: 10px;
     padding-inline: 40px;
     padding: 28px;
-    height: 159px;
+    height: auto;
+    @media (min-width:1024px) {
+        gap: 100px;
+        height: 159px;
+        flex-direction: row;
+    } 
     button{
         display: flex;
-        width: 158px;
+        width: 122px;
         padding: 12px 24px;
         justify-content: center;
         align-items: center;
         gap: 8px;
         flex-shrink: 0; 
-        font-size: 16px;
+        font-size: 12px;
         background-color: transparent;
         border: 1px solid #7E7B7B; 
+        @media (min-width:1024px) {
+           width: 158px;
+           font-size: 16px;
+        } 
     }}
  .day{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    gap: 50px;
+    align-items: center;
+    gap: 15px;
+    @media (min-width:1024px) {
+        gap: 50px;
+        flex-direction: row;
+    } 
     h2{
-        font-size: 80px;
+        font-size: 60px;
         color: var(--primary);
+        @media (min-width:1024px) {
+            font-size: 80px;;
+        } 
     }
 }
 .heure{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 80px;
+    gap: 24px;
+    @media (min-width:1024px) {
+        flex-direction: row;
+        gap: 32px;
+    } 
     p{
-        font-size: 18px;
+        font-size: 16px;
         line-height: 32px;
+        @media (min-width:1024px) {
+            font-size:18px;
+        } 
     }
     span.col{
         color: #8A8A8A;
     }
 }
 .ux{
-    width: 800px;
+    width: auto;
+    @media (min-width:1024px) {
+        width: 400px;
+    } 
+    @media (min-width:1280px) {
+        width: 600px;
+    }
+    width: auto;
+    @media (min-width:1536px) {
+        width: 800px;
+        
+    }
+    
+    
+}
+.hour{
+    text-align: center;
+    @media (min-width:1024px) {
+        text-align: left;
+    }
 }
 .more{
     .bouton{
@@ -300,31 +583,47 @@ header{
     display: flex;
     flex-direction: column;
     gap: 32px;
-    padding-top: 80px;
-    padding-inline: 100px;
-    padding-bottom: 80px;
+    padding: 50px;
+    @media (min-width:1024px) {
+        padding: 80px 100px;
+    }
 }
 .cardOne{
     display: flex;
+    flex-direction: column;
     gap: 32px;
     justify-content: center;
+    @media (min-width:1024px) {
+        flex-direction: row;
+    }
     
 }
 .card{
     background-image: url(/src/images/card1.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 49%;
-    height: 441px;
+    width: auto;
+    height: auto;
+    @media (min-width:1280px) {
+        height: 441px;
+    }
+    @media (min-width:1024px) {
+        height: 360px;
+        width: 49%;
+    }
 }
 .legende{
     display: flex;
     flex-direction: column;
     gap: 28px;
-    width: 373px;
-    padding-left: 40px;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    width: auto;
+    padding: 5%;
+    @media (min-width:1024px) {
+        padding-left: 40px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        width: 373px;
+    }
     h5{
         font-size: 32px;
         color: var(--primary);
@@ -359,7 +658,7 @@ header{
 .btn{
     .bouton{
         display: flex;
-        width: 228px;
+        width: 180px;
         padding: 12px 24px;
         justify-content: center;
         align-items: center;
@@ -367,16 +666,27 @@ header{
         background-color: transparent;
         color: white;
         border: white solid 2px;
+        @media (min-width: 1024px) {
+            width: 228px;
+        }
     }
 
 }
 .five{
-    padding-inline: 100px;
+    padding-inline: 30px;
     background-image: url(/src/images/bckday.png);
     background-size: cover;
-    padding-bottom: 200px;
+    padding-bottom: 80px;
+    @media (min-width:1024px) {
+        padding-inline: 100px;
+        padding-bottom: 200px;
+    }
     .communication{
         position: relative;
+        display: none;
+        @media (min-width:1024px) {
+            display: block;
+        }
         img{
             width: 100%;
         }
@@ -385,57 +695,200 @@ header{
         margin-bottom: 80px;
         margin-top: 80px;
     }
-}.txtLo{
+}
+.com{
+    display: block;
+    @media (min-width:1024px) {
+        display: none;
+    }
+
+    .cardIcon{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .imgCon{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        background-color: var(--primary);
+        img{
+            padding-left: 25px;
+            padding-top: 25px;
+        }
+    }
+    .txtI{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        h6{
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.2px;
+            text-transform: capitalize;
+        }
+        p{
+            font-size: 12px;
+            line-height: 20px; 
+        }
+    }
+}
+.txtLo{
     position: absolute;
     bottom: 15px;
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: 104px;
-    gap: 15px;
+    height: 70px;
+    gap: 5px;
+    @media (min-width:1024px) {
+        height: 90px;
+        gap: 10px; 
+    }
+    @media (min-width:1280px) {
+        gap: 15px;
+        height: 104px;
+       
+    }
     
     h6{
-        font-size: 28px;
+        font-size: 12px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
         letter-spacing: 0.2px;
         text-transform: capitalize; 
+        @media (min-width:1024px) {
+            font-size: 24px;
     }
+        @media (min-width:1280px) {
+            font-size: 26px;
+    }
+    
+        @media (min-width:1536px) {
+            font-size: 28px;
+            
+    }
+}
     p{
-        font-size: 20px;
-        line-height: 28px;
+        font-size: 10px;
+        line-height: 15px;
         color: #7A7777;
-    }
+        @media (min-width:1024px) {
+            font-size: 14px;
+            line-height: 24px;
+        }
+        @media (min-width:1280px) {
+            font-size: 16px;
+            line-height: 28px;
+            
+        }   
+        @media (min-width:1536px) {
+            font-size: 20px;
+            
+               
+        }
+        
+        
+ }
 }
 .midl{
     top: 15px;
-    left: 420px;
+    left: 186px;
+    @media (min-width:1024px) {
+        left: 252px;
+    }
+    @media (min-width:1280px){
+        left: 320px;
+   
+    }
+    @media (min-width:1536px){
+        left: 420px;
+        
+    }
+    
+       
+   
 }
 .midlHi{
     bottom: 15px;
-    left: 850px;
+    left: 376px;
+    @media (min-width:1024px) {
+        left: 502px;
+    }
+   
+    @media (min-width:1280px){
+        left: 626px;  
+    }
+   
+    @media (min-width:1536px){
+        left: 850px; 
+    }
 }
 .last{
     top: 15px;
-    left: 1250px;
+    left: 562px;
+    @media (min-width:1024px) {
+        left: 742px;
+    }
+    @media (min-width:1280px){
+        left: 956px; 
+    }
+    @media (min-width:1536px){
+        left: 1250px;   
+    }
+    
+    
 }
 .six{
     background-image: url(/src/images/back.png);
     background-size: cover;
-    padding-inline: 100px;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding: 80px;
+    @media (min-width:1536px){
+        padding: 80px 100px;
+    }
+    .slide{
+        width: 130px;
+        @media (min-width:1024px) {
+            width: auto;
+        }
+    }
     .titre{
         background-color: rgba(0, 0, 0, 0.20);
-        width: 40%;
+        width: auto;
         display: flex;
         flex-direction: column;
-        gap: 80PX;
+        gap: 10px;
         align-items: baseline;
-        padding:  124px 80px;
-        margin-left: 850px;
+        padding:  10px;
+        margin-left: 0px;
         color: white;
+        @media (min-width:1024px) {
+            width: 40%;
+            gap: 60px;
+            padding:  60px;
+            margin-left: 500px;
+        }
+        @media (min-width:1280px){
+            padding: 124px 80px;
+            margin-left: 635px;
+            gap: 80px;
+            
+        }
+        @media (min-width:1536px){
+            margin-left: 850px;
+            
+        }
+       
+       
         h3{
             font-size: 46px;
             color: #000;
@@ -454,9 +907,15 @@ header{
 .seven{
     display: flex;
     background-image: url(src/images/back3.png);
-    padding: 80px 100px;
+    padding: 50px ;
     flex-direction: column;
-    gap: 40px; 
+    gap: 40px;
+    @media (min-width:1024px) {
+        padding: 80px ;
+    } 
+    @media (min-width:1536px){
+        padding: 80px 100px;
+    }
 }
 .session{
     display: flex;
@@ -468,13 +927,17 @@ header{
     border-radius: 4px;
     background: #FFF; 
     h5{
-        font-size: 38px;
+        text-align: center;
+        font-size: 32px;
         color: #000;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
         letter-spacing: 0.2px;
         text-transform: capitalize; 
+        @media (min-width:1280px) {
+            font-size: 38px;
+        }
     }
     ul{
         font-size: 24px;
@@ -513,31 +976,107 @@ header{
 }
 .by{
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     gap: 32px; 
+    @media (min-width:1024px) {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 32px;
+    }
 }
 .youtube{
     background-image: url(src/images/bckday.png);
     display: flex;
-    padding: 80px 100px;
+    flex-direction: column-reverse;
+    padding: 80px;
     align-items: center;
     gap: 104px;
+    @media (min-width:1024px) {
+        flex-direction: row;
+    }
+    @media (min-width:1280px) {
+        padding: 80px 100px;
+    }
     .film{
         position: relative;
+        width: 100%;
+        img{
+            width: 100%;
+        }   
+
     } 
     .play{
-        position: absolute;
-        left: 330px;
-        top: 164px;
+        position: absolute; 
+        left: 140px;
+        top: 73px;
+        @media (min-width:1024px) {
+            left: 264px;
+            top: 127px;
+        }
+        @media (min-width:1280px) {
+            left: 330px;
+            top: 164px; 
+        }
+        @media (min-width:1536px) {
+            left: 471px;
+            top: 270px;
+        }
     }
+    .lorem{
+        gap: 20px;
+        width: 100%;
+        @media (min-width:1024px) {
+            width: 60%;
+        }
+        @media (min-width:1280px) {
+            gap: 40px;
+            width: 49%;
+        }
+    
+        h3{
+            font-size: 36px;
+            @media (min-width:1280px) {
+                font-size: 46px;
+            }
+            p{
+                font-size: 14px;
+                line-height: 24px;
+                @media (min-width:1280px) {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+            }
+        }
+        button{
+            background-color: transparent;
+            display: flex;
+            width: 228px;
+            padding: 12px 24px;
+            border: 1px solid #7E7B7B;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;  
+        }
+        .socio{
+            gap: 5px;
+            @media (min-width:1024px) {
+                gap: 30px;
+            } 
+        }
+}
 }
 .eight{
     background-image: url(src/images/avatar.png);
-    padding: 80px 100px;
+    padding: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px; 
+    @media (min-width:1536px){
+        padding: 80px 100px;
+    }
     .title{
         h3{
             color: #FFF;
@@ -553,10 +1092,11 @@ header{
     }
 }
 .cardRiley{
+    width: 80%;
     color: #FFF;
     font-size: 18px;
     display: flex;
-    padding: 40px;
+    padding: 25px;
     flex-direction: column;
     align-items: center;
     gap: 38px;
@@ -564,6 +1104,12 @@ header{
     border-radius: 4px;
     background: rgba(61, 75, 98, 0.60);
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
+    @media (min-width:1024) {
+        width: 25%;
+    }
+    @media (min-width:1536px){
+        padding:40px;
+    }
     
     .name{
         display: flex;
@@ -585,31 +1131,48 @@ header{
     }
     p{
         text-align: center;
-        font-size: 18px;
-        font-size: 18px;
+        font-size: 12px;
         line-height: 28px;
-        width: 373px;
+        width: 200px;
+        @media (min-width:1024px) {
+            font-size: 14px;
+            width: 278px;
+        }
+        @media (min-width:1280px) {
+            font-size: 18px;
+            width: 373px;
+           
+        }
     }
     a{
         color: #F9D1AD; 
         text-decoration: underline;
     }
 
-}
+    }
 .cardAvatar{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    flex-direction: column;
     gap: 32px;
     align-self: stretch; 
+    @media (min-width:1024px) {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+    }
 }
 .nine{
     background-color: #E57530;
     display: flex;
-    padding: 40px 0px;
+    padding: 40px 80px;
     flex-direction: column;
     align-items: center;
     gap: 80px;
     align-self: stretch;
+    @media (min-width:1536px){
+        padding: 80px 100px;
+    }
     .nel{
         h3{
             color: #FFF;
@@ -620,21 +1183,46 @@ header{
 }
 .cardRetrum{
     display: flex;
-    width: 748px;
-    height: 415px;
+    flex-direction: column;
+    padding-top: 10px;
+    width: 100%;
+    height: auto;
     align-items: center;
     gap: 40px;
-    background: #FFF;  
+    background: #FFF; 
+    @media (min-width:1024px) {
+        flex-direction: row;
+    }
+    .cible{
+        width: 50%;
+    
+    @media (min-width:1536px){
+        width: auto;
+       
+    }
+  }
 }
 .description{
     display: flex;
-    width: 323px;
-    padding: 70px 0px;
+    width: auto;
+    padding: 25px 10px;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     flex-shrink: 0;
     align-self: stretch; 
+    @media (min-width:1024px) {
+        width: 38%;
+        padding: 70px 0px;
+
+    }
+    @media (min-width:1280px) {
+        width: 230px;
+    }
+    @media (min-width:1536px){
+        width: 323px;
+       
+    }
 }
 .rutrum{
     display: flex;
@@ -649,11 +1237,20 @@ header{
         color: #FC8E29;
     }
     h4{
-        font-size: 32px;
+        font-size: 20px;
         color: #000;
         font-style: normal;
         font-weight: 400;
-        line-height: 40px; 
+        line-height: 28px; 
+        @media (min-width:1024px) {
+            font-size: 28px;
+            line-height: 36px;
+    }
+        @media (min-width:1280px) {
+            font-size: 32px;
+            line-height: 40px;
+           
+        }
     }
 }
 .know{
@@ -668,8 +1265,12 @@ header{
 }
 .card1{
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     gap: 40px; 
+    @media (min-width:1024px) {
+        flex-direction: row;
+    }
 }
 .cardR{
     display: flex;
@@ -678,11 +1279,19 @@ header{
     gap: 40px; 
 }
 .contact{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     grid-template-columns: 1fr 1fr;
-    padding: 80px 100px;
-    align-items: flex-end;
+    padding: 50px 20px;
+    align-items: flex-start;
     gap: 104px; 
+    @media (min-width:1024px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 80px 100px;
+        align-items: flex-end;
+        gap: 104px;
+    }
 }
 .cardContact{
     display: flex;
@@ -695,19 +1304,25 @@ header{
 .contacte{
     h4{
         color: #080B29;
-        font-size: 40px;
+        font-size: 32px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
         letter-spacing: 0.2px;
         text-transform: capitalize; 
+        @media (min-width:1024px) {
+            font-size: 40px;
+        }
     }
     p{
         color: #F19540;
-        font-size: 24px;
+        font-size: 18px;
         font-style: normal;
         font-weight: 400;
         line-height: 28px;
+        @media (min-width:1024px) {
+            font-size: 24px;
+        }
     }
 }
 .adress{
@@ -738,6 +1353,7 @@ header{
     gap: 18px;
     width: 100%;
     border-bottom: 0.5px solid #898787; 
+
     p{
         font-size: 18px;
     }
@@ -758,7 +1374,12 @@ header{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 40px; 
+    gap: 40px;
+    width: 60%; 
+    @media (min-width:1024px) {
+        width: auto;
+    }
+    
 }
 .request{
     display: flex;
@@ -790,12 +1411,16 @@ a{
 footer{
     background-color: #262C3A;;
     display: flex;
-    height: 800px;
-    padding: 100px;
+    height: auto;
+    padding: 20px;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     align-self: stretch; 
+    @media (min-width:1024px) {
+        height: 800px;
+        padding: 100px;
+    }
     }
 .logo2{
     width: 177.021px;
@@ -803,33 +1428,42 @@ footer{
 }    
 .lastCard{
     display: flex;
-    width: 1021px;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     gap: 60px; 
+    @media (min-width:1024px) {
+        width: 1021px;
+    }
     p{
         color: #F9D1AD;
         text-align: center;
         font-family: Frank Ruhl Libre;
-        font-size: 24px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: 28px; 
+        @media (min-width:1024px) {
+            font-size: 24px;
+        }
     }
     .Email{
-        width: 100%;
+        width: auto;
         display: flex;
         padding-left: 0px;
         justify-content: space-between;
         align-items: center;
         background-color: #3C4049;
+        @media (min-width:1024px) {
+            width: 100%;
+        }
         
     
     }
     button{
         display: flex;
-        width: 262px;
-        padding: 24px;
+        width: auto;
+        padding: 20px;
         justify-content: center;
         align-items: center;
         gap: 8px;
@@ -837,32 +1471,45 @@ footer{
         color: #FFF;
         text-align: center;
         font-family: Poppins;
-        font-size: 16px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
         text-transform: uppercase; 
         background-color: #34373E;
         border: none;
+        @media (min-width:1024px) {
+            width: 262px;
+            padding: 24px;
+            font-size: 16px;
+        }
 
     }
     input{
         color: #FFF;
         text-align: center;
         font-family: Poppins;
-        font-size: 16px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: normal; 
-        padding: 24px;
+        padding: 20px;
         background-color: #3C4049;
         border: none;
+        @media (min-width:1024px) {
+            padding: 24px;
+            font-size: 16px;
+        }
     }
 }
 nav{
-    display: flex;
+    display: inline-grid;
     align-items: center;
-    gap: 28px; 
+    gap: 28px;
+    @media (min-width:1024px) {
+        display: flex;
+
+    } 
     a{
     color: #FFF;
     text-align: center;
@@ -871,13 +1518,18 @@ nav{
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    text-transform: uppercase
+    text-transform: uppercase;
+    
 }
 }
 .socio{
     display: flex;
     align-items: center;
-    gap: 30px; 
+    gap: 10px; 
+    @media (min-width:1024px) {
+        gap: 30px;
+
+    }
 }
 .typo{
     p{
